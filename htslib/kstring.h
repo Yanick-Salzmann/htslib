@@ -118,7 +118,7 @@ extern "C" {
 	int kgetline(kstring_t *s, kgets_func *fgets, void *fp);
 
     // This matches the signature of hgetln(), apart from the last pointer
-	typedef ssize_t kgets_func2(char *, size_t, void *);
+	typedef ptrdiff_t kgets_func2(char *, size_t, void *);
     HTSLIB_EXPORT
 	int kgetline2(kstring_t *s, kgets_func2 *fgets, void *fp);
 

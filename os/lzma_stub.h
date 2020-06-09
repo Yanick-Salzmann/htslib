@@ -2,7 +2,7 @@
 #define LZMA_STUB_H
 
 /* Some platforms, notably macOS, ship a usable liblzma shared library but
-   do not ship any LZMA header files. The <lzma.h> and <lzma/{*}.h> header
+   do not ship any LZMA header files. The <lzma_old.h> and <lzma_old/{*}.h> header
    files that come with the library contain the following statement:
 
      *
@@ -13,7 +13,7 @@
      *
 
    Accordingly the following declarations have been copied and distilled
-   from <lzma/base.h> and <lzma/container.h> (primarily) and are sufficient
+   from <lzma_old/base.h> and <lzma_old/container.h> (primarily) and are sufficient
    to compile cram/cram_io.c in the absence of proper LZMA headers.
 
    This file, lzma_stub.h, remains in the public domain.  */

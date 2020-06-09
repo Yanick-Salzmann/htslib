@@ -134,7 +134,7 @@ typedef struct BGZF BGZF;
      * @return       number of bytes actually read; 0 on end-of-file and -1 on error
      */
     HTSLIB_EXPORT
-    ssize_t bgzf_read(BGZF *fp, void *data, size_t length) HTS_RESULT_USED;
+    ptrdiff_t bgzf_read(BGZF *fp, void *data, size_t length) HTS_RESULT_USED;
 
     /**
      * Write _length_ bytes from _data_ to the file.  If no I/O errors occur,
@@ -146,7 +146,7 @@ typedef struct BGZF BGZF;
      * @return       number of bytes written (i.e., _length_); negative on error
      */
     HTSLIB_EXPORT
-    ssize_t bgzf_write(BGZF *fp, const void *data, size_t length) HTS_RESULT_USED;
+    ptrdiff_t bgzf_write(BGZF *fp, const void *data, size_t length) HTS_RESULT_USED;
 
     /**
      * Write _length_ bytes from _data_ to the file, the index will be used to
@@ -159,7 +159,7 @@ typedef struct BGZF BGZF;
      * @return       number of bytes written (i.e., _length_); negative on error
      */
     HTSLIB_EXPORT
-    ssize_t bgzf_block_write(BGZF *fp, const void *data, size_t length);
+    ptrdiff_t bgzf_block_write(BGZF *fp, const void *data, size_t length);
 
     /**
      * Returns the next byte in the file without consuming it.
@@ -182,7 +182,7 @@ typedef struct BGZF BGZF;
      * @return       number of bytes actually read; 0 on end-of-file and -1 on error
      */
     HTSLIB_EXPORT
-    ssize_t bgzf_raw_read(BGZF *fp, void *data, size_t length) HTS_RESULT_USED;
+    ptrdiff_t bgzf_raw_read(BGZF *fp, void *data, size_t length) HTS_RESULT_USED;
 
     /**
      * Write _length_ bytes directly to the underlying stream without
@@ -195,7 +195,7 @@ typedef struct BGZF BGZF;
      * @return       number of bytes actually written; -1 on error
      */
     HTSLIB_EXPORT
-    ssize_t bgzf_raw_write(BGZF *fp, const void *data, size_t length) HTS_RESULT_USED;
+    ptrdiff_t bgzf_raw_write(BGZF *fp, const void *data, size_t length) HTS_RESULT_USED;
 
     /**
      * Write the data in the buffer to the file.
@@ -280,7 +280,7 @@ typedef struct BGZF BGZF;
      * @return      0 if flushing succeeded or was not needed; negative on error
      */
     HTSLIB_EXPORT
-    int bgzf_flush_try(BGZF *fp, ssize_t size) HTS_RESULT_USED;
+    int bgzf_flush_try(BGZF *fp, ptrdiff_t size) HTS_RESULT_USED;
 
     /**
      * Read one byte from a BGZF file. It is faster than bgzf_read()

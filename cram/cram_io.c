@@ -50,7 +50,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <unistd.h>
 #include <zlib.h>
 #ifdef HAVE_LIBBZ2
-#include <bzlib.h>
+#include <bzip2/bzlib.h>
 #endif
 #ifdef HAVE_LIBLZMA
 #ifdef HAVE_LZMA_H

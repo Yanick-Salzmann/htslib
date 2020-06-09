@@ -32,7 +32,7 @@ DEALINGS IN THE SOFTWARE.  */
 #include <errno.h>
 #include <limits.h>
 
-#include <pthread.h>
+#include <pthread/include/pthread.h>
 
 #ifdef ENABLE_PLUGINS
 #if defined(_WIN32) || defined(__CYGWIN__) || defined(__MSYS__)
@@ -1040,7 +1040,7 @@ static void load_hfile_plugins()
     hfile_add_scheme_handler("data", &data);
     hfile_add_scheme_handler("file", &file);
     hfile_add_scheme_handler("preload", &preload);
-    init_add_plugin(NULL, hfile_plugin_init_net, "knetfile");
+    //init_add_plugin(NULL, hfile_plugin_init_net, "knetfile");
     init_add_plugin(NULL, hfile_plugin_init_mem, "mem");
     init_add_plugin(NULL, hfile_plugin_init_crypt4gh_needed, "crypt4gh-needed");
 

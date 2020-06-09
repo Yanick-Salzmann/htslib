@@ -42,7 +42,7 @@ DEALINGS IN THE SOFTWARE.  */
 #ifndef THREAD_POOL_INTERNAL_H
 #define THREAD_POOL_INTERNAL_H
 
-#include <pthread.h>
+#include <pthread/include/pthread.h>
 #include <stdint.h>
 #include "htslib/thread_pool.h"
 

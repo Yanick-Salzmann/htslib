@@ -64,3 +64,5 @@ shlib-exports-*.txt
 /test/*.tmp.*
 
 /TAGS
+
+cmake-build-*

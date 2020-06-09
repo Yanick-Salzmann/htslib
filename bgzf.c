@@ -32,7 +32,7 @@
 #include <errno.h>
 #include <unistd.h>
 #include <assert.h>
-#include <pthread.h>
+#include <pthread/include/pthread.h>
 #include <sys/types.h>
 #include <inttypes.h>
 #include <zlib.h>
